@@ -1,0 +1,111 @@
+/* 画风沿用个人网站「妍子的家」新版：雾白玻璃房、粉紫蓝柔光、宋体标题、斜体英文小标 */
+:root {
+  --ink: #40414c;
+  --ink-soft: #7b7c8a;
+  --ink-faint: #a9aab6;
+  --rose-deep: #d98aac;
+  --line-2: rgba(150, 150, 190, 0.22);
+  --grad: linear-gradient(105deg, #d98aac, #b78dcf 60%, #7fa9d6);
+  --serif: "Noto Serif SC", "Songti SC", "STSong", serif;
+  --latin: "Cormorant Garamond", "Georgia", serif;
+  --sans: "Noto Sans SC", "PingFang SC", -apple-system, "Helvetica Neue", sans-serif;
+  --mono: "SF Mono", ui-monospace, monospace;
+  --glass-sh: 0 20px 50px -28px rgba(110, 120, 170, 0.4);
+  --card-sh: 0 30px 60px -24px rgba(120, 130, 175, 0.34), 0 8px 20px -12px rgba(150, 120, 150, 0.2);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  font-family: var(--sans);
+  color: var(--ink);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  background:
+    radial-gradient(52vw 52vw at 8% -6%, rgba(243, 185, 208, 0.55), transparent 62%),
+    radial-gradient(50vw 50vw at 96% 2%, rgba(185, 216, 242, 0.55), transparent 60%),
+    radial-gradient(46vw 46vw at 78% 62%, rgba(207, 199, 236, 0.48), transparent 62%),
+    radial-gradient(40vw 40vw at 14% 88%, rgba(255, 217, 194, 0.4), transparent 60%),
+    linear-gradient(180deg, #f3f6fc 0%, #fbf6f4 100%);
+  background-attachment: fixed;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.orb {
+  position: fixed; z-index: -1; border-radius: 50%; filter: blur(3px); opacity: 0.6; pointer-events: none;
+  background: radial-gradient(circle at 38% 34%, rgba(255, 255, 255, 0.95), rgba(243, 185, 208, 0.55) 42%, transparent 72%);
+}
+.orb.blue { background: radial-gradient(circle at 38% 34%, rgba(255, 255, 255, 0.95), rgba(185, 216, 242, 0.6) 42%, transparent 72%); }
+.orb.lilac { background: radial-gradient(circle at 38% 34%, rgba(255, 255, 255, 0.95), rgba(207, 199, 236, 0.6) 42%, transparent 72%); }
+
+.topnav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px clamp(16px, 4vw, 44px);
+  background: rgba(251, 250, 252, 0.6);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.brand .zh { font-family: var(--serif); font-weight: 500; font-size: 18px; letter-spacing: 0.1em; }
+.brand .en { font-family: var(--latin); font-style: italic; color: var(--ink-faint); margin-left: 10px; letter-spacing: 0.12em; }
+.pill {
+  font-size: 13px; padding: 7px 16px; border-radius: 999px; color: var(--rose-deep);
+  background: rgba(255, 255, 255, 0.6); border: 1px solid rgba(243, 185, 208, 0.7);
+  transition: background 0.2s;
+}
+.pill:hover { background: rgba(255, 255, 255, 0.9); }
+
+.wrap { max-width: 1000px; margin: 0 auto; padding: clamp(48px, 7vw, 88px) clamp(16px, 4vw, 44px) 96px; }
+
+.kicker {
+  display: inline-flex; align-items: center; gap: 11px;
+  font-family: var(--latin); font-style: italic; font-size: 16px; letter-spacing: 0.16em; color: var(--rose-deep);
+}
+.kicker::before, .kicker::after { content: ""; width: 26px; height: 1px; background: var(--rose-deep); opacity: 0.5; }
+.sec-title { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.6vw, 42px); letter-spacing: 0.05em; margin-top: 10px; }
+.sub { font-weight: 300; color: var(--ink-soft); margin-top: 8px; }
+
+.grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 22px; margin-top: 36px; }
+.ncard {
+  display: flex; flex-direction: column; height: 100%; padding: 24px 24px 20px; border-radius: 24px;
+  background: rgba(255, 255, 255, 0.62); border: 1px solid rgba(255, 255, 255, 0.85); box-shadow: var(--glass-sh);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s;
+}
+.ncard:hover { transform: translateY(-6px); box-shadow: 0 34px 60px -30px rgba(120, 120, 175, 0.5); }
+.date { font-family: var(--latin); font-style: italic; font-size: 14px; letter-spacing: 0.12em; color: var(--ink-faint); }
+.ncard h3 { font-family: var(--serif); font-weight: 500; font-size: 19px; line-height: 1.55; margin-top: 6px; letter-spacing: 0.02em; }
+.ncard p { font-size: 14px; font-weight: 300; color: var(--ink-soft); line-height: 1.75; margin-top: 8px; flex: 1; }
+.ncard .go { font-size: 13px; color: var(--rose-deep); margin-top: 14px; letter-spacing: 0.05em; }
+
+.note {
+  max-width: 780px; margin: 0 auto; padding: clamp(24px, 5vw, 64px); border-radius: 30px;
+  background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(255, 255, 255, 0.9); box-shadow: var(--card-sh);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  font-size: 16.5px; font-weight: 300; line-height: 2; overflow-wrap: anywhere;
+}
+.note .date { display: block; text-align: center; }
+.note h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 3.4vw, 36px); line-height: 1.45; text-align: center; margin: 10px 0 14px; letter-spacing: 0.04em; }
+.note .lead { text-align: center; color: var(--ink-soft); padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--line-2); }
+.note p { margin: 14px 0; }
+.note strong { font-weight: 500; }
+.note h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin: 44px 0 6px; letter-spacing: 0.04em; }
+.note h2::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 12px; vertical-align: middle; background: var(--grad); }
+.note ul, .note ol { padding-left: 1.3em; }
+.note li { margin: 6px 0; }
+.note li::marker { color: var(--rose-deep); }
+.note hr { border: 0; border-top: 1px solid var(--line-2); margin: 32px 0; }
+.note blockquote { border-left: 3px solid rgba(243, 185, 208, 0.9); padding-left: 16px; color: var(--ink-soft); }
+.note table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; display: block; overflow-x: auto; }
+.note th, .note td { padding: 8px 12px; border-bottom: 1px solid var(--line-2); text-align: left; white-space: nowrap; }
+.note th { font-weight: 500; }
+.note code { font-family: var(--mono); font-size: 0.85em; background: rgba(207, 199, 236, 0.35); color: #6b5a9a; padding: 2px 7px; border-radius: 7px; }
+.note pre { background: rgba(243, 246, 252, 0.9); border: 1px solid rgba(185, 216, 242, 0.6); border-radius: 16px; padding: 14px 18px; overflow-x: auto; margin: 14px 0; line-height: 1.7; }
+.note pre code { background: none; padding: 0; color: #4d5a78; overflow-wrap: normal; }
+
+.back-row { text-align: center; margin-top: 40px; }
+.foot { text-align: center; margin-top: 48px; font-family: var(--latin); font-style: italic; color: var(--ink-faint); letter-spacing: 0.14em; }
+.empty { text-align: center; padding-top: 12vh; }
+.empty p { color: var(--ink-soft); margin: 12px 0 28px; }

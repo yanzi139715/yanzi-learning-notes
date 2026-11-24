@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
+import { formatDate } from "@/content/format";
 import { getPublishedNote, getPublishedNotes } from "@/content/notes";
 
 type NotePageProps = {
@@ -32,20 +33,22 @@ export default async function NotePage({ params }: NotePageProps) {
   }
 
   return (
-    <>
-      <nav aria-label="返回">
-        <Link href="/">返回全部笔记</Link>
-      </nav>
-      <main>
-        <article>
-          <header>
-            <time dateTime={note.publishedAt}>{note.publishedAt}</time>
-            <h1>{note.title}</h1>
-            <p>{note.summary}</p>
-          </header>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>{note.content}</ReactMarkdown>
-        </article>
-      </main>
-    </>
+    <main className="wrap">
+      <article className="note">
+        <header>
+          <time className="date" dateTime={note.publishedAt}>
+            {formatDate(note.publishedAt)}
+          </time>
+          <h1>{note.title}</h1>
+          <p className="lead">{note.summary}</p>
+        </header>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{note.content}</ReactMarkdown>
+      </article>
+      <div className="back-row">
+        <Link className="pill" href="/">
+          ← 全部笔记
+        </Link>
+      </div>
+    </main>
   );
 }
