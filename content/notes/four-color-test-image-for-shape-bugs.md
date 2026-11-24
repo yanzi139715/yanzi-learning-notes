@@ -1,7 +1,7 @@
 ---
 title: 头像圆角“不生效”，可能是测试图骗了你
 summary: 查圆角和裁切问题时，用四个角颜色不同的纯色图来测，别用截图。
-publishedAt: 2026-11-24
+publishedAt: 2026-09-23
 status: published
 ---
 

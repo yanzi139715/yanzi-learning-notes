@@ -1,7 +1,7 @@
 ---
 title: 用浏览器自动截图拼视频，画面卡顿、跳帧、闪屏怎么办
 summary: 慢镜头卡、规律性抖动、偶尔闪一下，多半是录制和拼接方法的问题，不是网页本身。
-publishedAt: 2026-11-24
+publishedAt: 2026-10-22
 status: published
 ---
 

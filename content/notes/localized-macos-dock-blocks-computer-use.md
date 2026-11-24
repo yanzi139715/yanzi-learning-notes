@@ -1,7 +1,7 @@
 ---
 title: 中文 Mac 上，让 AI 点屏幕总被「程序坞」挡住
 summary: 只把程序坞和通知中心的语言改成英文，点击就正常了，系统其他地方还是中文。
-publishedAt: 2026-11-24
+publishedAt: 2026-11-06
 status: published
 ---
 

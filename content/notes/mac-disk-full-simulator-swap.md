@@ -1,7 +1,7 @@
 ---
 title: Mac 突然提示磁盘满了，却找不到大文件
 summary: 多开模拟器把内存吃光，系统拿硬盘当内存用，一下子占掉十几 GB。
-publishedAt: 2026-11-24
+publishedAt: 2026-10-07
 status: published
 ---
 

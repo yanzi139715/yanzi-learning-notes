@@ -1,7 +1,7 @@
 ---
 title: React Native 安卓上调大系统字号，文字被截掉、行距乱跳
 summary: 字号上限只管字号，不管行高和字距。三者按同一个倍数一起放大就好了。
-publishedAt: 2026-11-24
+publishedAt: 2026-10-11
 status: published
 ---
 

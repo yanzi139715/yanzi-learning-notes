@@ -1,7 +1,7 @@
 ---
 title: 用 AI 修图越修越糊？把满意的那版当底稿，只换一小块
 summary: AI 每改一次都会重画整张图，改几轮细节就丢了。更稳的办法是保留原图，只把需要的部分拼回去。
-publishedAt: 2026-11-24
+publishedAt: 2026-11-23
 status: published
 ---
 

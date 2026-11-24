@@ -1,7 +1,7 @@
 ---
 title: 几个 AI 在同一个文件夹里干活，提交时会混进别人的改动
 summary: 同一个工作区只有一个暂存区，只 add 自己的文件也可能把别人的改动一起提交。
-publishedAt: 2026-11-24
+publishedAt: 2026-09-23
 status: published
 ---
 

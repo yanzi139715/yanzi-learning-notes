@@ -1,7 +1,7 @@
 ---
 title: 本地预览页打不开了，先看预览服务是不是自己停了
 summary: 页面文件好好的，地址却连不上，多半是临时预览服务闲置太久自动退出了。
-publishedAt: 2026-11-24
+publishedAt: 2026-09-07
 status: published
 ---
 
